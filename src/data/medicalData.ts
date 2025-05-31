@@ -1,0 +1,58 @@
+import { MedicalBlock } from "@/types/medical";
+
+export const medicalBlocks: MedicalBlock[] = [
+  {
+    id: "cardiology",
+    title: "Кардиология",
+    description: "Заболевания сердечно-сосудистой системы",
+    connections: ["neurology", "endocrinology"],
+    position: { x: 20, y: 30 },
+    color: "from-red-500 to-pink-600",
+    icon: "❤️",
+  },
+  {
+    id: "neurology",
+    title: "Неврология",
+    description: "Нервная система и мозг",
+    connections: ["cardiology", "psychiatry"],
+    position: { x: 60, y: 20 },
+    color: "from-purple-500 to-indigo-600",
+    icon: "🧠",
+  },
+  {
+    id: "endocrinology",
+    title: "Эндокринология",
+    description: "Гормональная система организма",
+    connections: ["cardiology", "metabolism"],
+    position: { x: 30, y: 70 },
+    color: "from-green-500 to-teal-600",
+    icon: "⚗️",
+  },
+  {
+    id: "psychiatry",
+    title: "Психиатрия",
+    description: "Психические расстройства",
+    connections: ["neurology", "psychology"],
+    position: { x: 80, y: 60 },
+    color: "from-blue-500 to-cyan-600",
+    icon: "🧘",
+  },
+  {
+    id: "metabolism",
+    title: "Метаболизм",
+    description: "Обмен веществ в организме",
+    connections: ["endocrinology", "nutrition"],
+    position: { x: 15, y: 80 },
+    color: "from-yellow-500 to-orange-600",
+    icon: "⚡",
+  },
+  {
+    id: "psychology",
+    title: "Психология",
+    description: "Поведение и когнитивные процессы",
+    connections: ["psychiatry", "neurology"],
+    position: { x: 70, y: 85 },
+    color: "from-violet-500 to-purple-600",
+    icon: "🎭",
+  },
+];
